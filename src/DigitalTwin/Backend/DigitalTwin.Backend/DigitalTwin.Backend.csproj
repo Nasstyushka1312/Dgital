@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\DigitalTwin.Protos\DigitalTwin.Protos.csproj" />
-    <ProjectReference Include="..\DigitalTwin.Database\DigitalTwin.DAL.csproj" />
+    <ProjectReference Include="..\DigitalTwin.DAL\DigitalTwin.DAL.csproj" />
   </ItemGroup>
 
 </Project>
