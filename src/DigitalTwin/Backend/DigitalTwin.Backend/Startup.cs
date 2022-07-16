@@ -25,7 +25,8 @@ namespace DigitalTwin.Backend
         {
             services.AddDbContext<DataContext>(options =>
             {
-                options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"));
+                options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"),
+                    x => x.MigrationsAssembly("DigitalTwin.DAL"));
             });
 
             services.AddGrpc();
