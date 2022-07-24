@@ -1,4 +1,5 @@
 ﻿using DigitalTwin.DAL;
+using DigitalTwin.Jobs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -26,6 +27,9 @@ namespace DigitalTwin.Backend
             });
 
             services.AddGrpc();
+
+            services.AddHostedService<ClearExpiredLinks>();
+            //services.AddHostedService<UpdateProductPrices>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
