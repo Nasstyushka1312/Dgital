@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DigitalTwin.DAL.Models
@@ -6,6 +8,7 @@ namespace DigitalTwin.DAL.Models
     [Index(nameof(Email), IsUnique = true)]
     public class User
     {
+        [Required]
         public int Id { get; set; }
 
         [Required]
@@ -25,5 +28,17 @@ namespace DigitalTwin.DAL.Models
 
         [Required]
         public bool IsIndividual { get; set; }
+
+        [Required]
+        public DateTime CreateDate { get; set; }
+
+        //Relationships
+        public virtual ActivateLink ActivateLink { get; set; }
+
+        public virtual LegalEntity LegalEntity { get; set; }
+
+        public virtual List<ActivatedExtension> ActivatedExtensions { get; set; }
+
+        public virtual List<DigitalModel> DigitalModels { get; set; }
     }
 }
