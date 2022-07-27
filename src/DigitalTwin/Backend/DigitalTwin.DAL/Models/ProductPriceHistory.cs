@@ -1,31 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DigitalTwin.DAL.Models
 {
-    public class DigitalModel
+    public class ProductPriceHistory
     {
         [Required]
         public int Id { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(User))]
-        public int UserId { get; set; }
 
         [Required]
         [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }
 
         [Required]
-        public DateTime CreateDate { get; set; }
+        public DateTime Date { get; set; }
+
+        [Required]
+        public decimal Price { get; set; }
 
         //Relationships
-        public virtual User User { get; set; }
-
         public virtual Product Product { get; set; }
-
-        public virtual List<ActivatedExtension> ActivatedExtensions { get; set; }
     }
 }

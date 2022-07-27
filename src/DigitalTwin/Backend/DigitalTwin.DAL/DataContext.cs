@@ -5,6 +5,7 @@ namespace DigitalTwin.DAL
 {
     public class DataContext : DbContext
     {
+        #region Properties
         public DbSet<User> Users { get; set; }
 
         public DbSet<ActivateLink> ActivateLinks { get; set; }
@@ -16,6 +17,12 @@ namespace DigitalTwin.DAL
         public DbSet<ActivatedExtension> ActivatedExtensions { get; set; }
 
         public DbSet<DigitalModel> DigitalModels { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<ProductPriceHistory> ProductPriceHistory { get; set; }
+
+        #endregion
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -30,6 +37,10 @@ namespace DigitalTwin.DAL
 
             modelBuilder.Entity<DigitalModel>()
                 .Property(dm => dm.CreateDate)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            modelBuilder.Entity<ProductPriceHistory>()
+                .Property(pph => pph.Date)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
             modelBuilder.Entity<ActivatedExtension>()
