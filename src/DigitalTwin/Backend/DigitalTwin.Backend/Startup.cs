@@ -20,6 +20,8 @@ namespace DigitalTwin.Backend
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLogging();
+
             services.AddDbContext<DataContext>(options =>
             {
                 options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"),
@@ -28,8 +30,10 @@ namespace DigitalTwin.Backend
 
             services.AddGrpc();
 
+            //HACK Background services. Uncomment in case of check and release!!!
+            services.AddHostedService<UpdateProductPrices>();
             services.AddHostedService<ClearExpiredLinks>();
-            //services.AddHostedService<UpdateProductPrices>();
+            //
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
