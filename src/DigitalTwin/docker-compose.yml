@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  digitaltwin.microservice.webmanager:
+    image: ${DOCKER_REGISTRY-}digitaltwinmicroservicewebmanager
+    ports:
+      - "5001:443"
+    build:
+      context: .
+      dockerfile: Microservices/Frontend/Web/DigitalTwin.Microservice.WebManager/Dockerfile
+
+
+  digitaltwin.microservice.dbmanager:
+    image: ${DOCKER_REGISTRY-}digitaltwinmicroservicedbmanager
+    ports:
+      - "5002:443"
+    build:
+      context: .
+      dockerfile: Microservices/Backend/DigitalTwin.Microservice.DbManager/Dockerfile
+
+
+  digitaltwin.microservice.job.removeexpiredlinks:
+    image: ${DOCKER_REGISTRY-}digitaltwinmicroservicejobremoveexpiredlinks
+    ports:
+      - "5010:443"
+    build:
+      context: .
+      dockerfile: Microservices/Jobs/DigitalTwin.Microservice.Job.RemoveExpiredLinks/Dockerfile
+
+
+  digitaltwin.microservice.job.updatecommoditiesprices:
+    image: ${DOCKER_REGISTRY-}digitaltwinmicroservicejobupdatecommoditiesprices
+    ports:
+      - "5011:443"
+    build:
+      context: .
+      dockerfile: Microservices/Jobs/DigitalTwin.Microservice.Job.UpdateCommoditiesPrices/Dockerfile
+
