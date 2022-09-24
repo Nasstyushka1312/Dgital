@@ -18,7 +18,7 @@ class CreateModel extends Component {
                             <CardForBody>
                                 <h5 style={{ fontFamily: 'Open Sans', margin: '20px 0px 50px 0px' }}>Создание модели</h5>
                             <Input Label="Наименование модели" placeholder="Введите наименование..."></Input>
-                            
+                            <Combobox></Combobox>
                             <Container style={{
                                 display: 'flex', padding: '25px 0px 5px 0px',justifyContent: 'center' } }><ButtonOpt textForButton="Создать модель" /></Container>
                             <div id="Warning"><a style={{ color: '#F5CA5D', textDecoration: 'auto' }} href="/models">Вернуться к моделям</a></div>
