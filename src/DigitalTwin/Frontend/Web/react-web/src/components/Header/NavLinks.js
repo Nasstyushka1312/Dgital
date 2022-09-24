@@ -18,7 +18,7 @@ function NavLinks(props) {
                     <Nav.Link href="/tariffs" className={context.theme + " navbar-brand"}>Тарифы
             </Nav.Link>
                     <Vector_Icon />
-                    <Profile_Icon/>
+                    <Profile_Icon active={props.active} updateActive={props.updateActive} />
                 </Container>
             )}
             </ThemeContextConsumer>)

@@ -53,6 +53,7 @@ body, html{
     background: #FFFFFF !important;
     color: #334152 !important;
     fill: #334152 !important;
+    filter: invert(0);
 }
 .lightIcon {
     fill: #334152 !important;

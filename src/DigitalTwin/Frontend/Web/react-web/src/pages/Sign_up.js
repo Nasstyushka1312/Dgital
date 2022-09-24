@@ -17,7 +17,7 @@ class SignUp extends Component {
             <div style={{ height:'100%' }}>
                 <Header />
                     <div className={context.theme + "Gray " + "body_style"}>
-                    <CardForBody>
+                            <CardForBody>
                         <h5 style={{ fontFamily: 'Open Sans',margin:'0px 0px 40px 0px' }}>Регистрация</h5>
                         <Tumbler/>
                         <form>

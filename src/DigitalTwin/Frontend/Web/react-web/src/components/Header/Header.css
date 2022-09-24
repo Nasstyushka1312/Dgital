@@ -1,6 +1,7 @@
 .icon_for_header {
     width: 20px;
-    fill: white!important;
+    fill: white !important;
+    filter:invert(1);
 }
 #DTwin-logo {
     font-family: Roboto!important;

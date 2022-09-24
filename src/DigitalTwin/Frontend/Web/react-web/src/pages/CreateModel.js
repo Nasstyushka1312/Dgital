@@ -3,7 +3,7 @@ import CardForBody from './../components/Card_For_body/CardForBody.js';
 import './pages.css';
 import Input from './../components/input/Input.js';
 import { Container } from 'react-bootstrap';
-import Header from '../components/Header/SubHeader/Header';
+import Header_Before_Profile from '../components/Header/Header_Before_Profile/Header_Before_Profile';
 import { ThemeContextConsumer } from "../components/ThemeContext";
 import ButtonOpt from "../components/Button/ButtonOpt";
 import Combobox from '../components/Combobox/ComboBox.js';
@@ -13,7 +13,7 @@ class CreateModel extends Component {
         return (<>
                 <ThemeContextConsumer>{context => (
                     <div style={{ height: '100%' }}>
-                        <Header />
+                    <Header_Before_Profile />
                         <div className={context.theme + "Gray " + "body_style"}>
                             <CardForBody>
                                 <h5 style={{ fontFamily: 'Open Sans', margin: '20px 0px 50px 0px' }}>Создание модели</h5>

@@ -1,5 +1,8 @@
 #colorGreen {
-    fill: #47A400!important;
+    fill: #302F38 !important;
+    filter: invert(46%) sepia(88%) saturate(948%) hue-rotate(58deg) brightness(90%) contrast(101%);
+    width: 36px;
+   background: none!important;
 }
 .icon_for_modal {
     margin: 0px 8px;

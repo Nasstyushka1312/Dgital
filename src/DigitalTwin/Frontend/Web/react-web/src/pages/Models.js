@@ -5,36 +5,22 @@ import Inside_Card_For_Body from '../components/Inside_Card_For_Body/Inside_Card
 import CardForBody from '../components/Card_For_body/CardForBody';
 import './pages.css';
 import { Row, Col, Container, Card } from 'react-bootstrap';
+import { Culture } from '../components/classForDataBase'
 import ModelsCont from '../components/CardsModels/ModelsCont';
 class Models extends Component {
-    culture = [{
-        culture: "Пшеница",
-        viewModel: "Вид модели",
-        currentEvent: "Текущее мероприятие",
-        advice: "Совет",
-        color: "#00A500"
-    },
-    {
-        culture: "Кукуруза",
-        viewModel: "Вид модели",
-        currentEvent: "Текущее мероприятие",
-        advice: "Совет",
-        color: "#FFCC00"
-    },
-    {
-        culture: "Название модели",
-        viewModel: "Вид модели",
-        currentEvent: "Текущее мероприятие",
-        advice: "Совет",
-        color: "#FE0000"
-        }];
+
+    cultures = [
+        new Culture("Пшеница", "Вид модели", "Текущее мероприятие", "Совет", "#00A500"),
+        new Culture("Кукуруза", "Вид модели", "Текущее мероприятие", "Совет", "#FFCC00"),
+        new Culture("Название модели", "Вид модели", "Текущее мероприятие", "Совет", "#FE0000"),
+    ]
     render() {
         return (
             <ThemeContextConsumer>{context => (
                 <div style={{ height: '100%' }}>
                     <Header_Before_Profile />
                     <div className={context.theme + "Gray " + "body_style"}>
-                        <ModelsCont culture={this.culture}/>
+                        <ModelsCont culture={this.cultures}/>
                     </div>
                 </div>)}
             </ThemeContextConsumer>

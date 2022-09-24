@@ -14,7 +14,7 @@ function CardModel(props) {
                         <circle cx="8" cy="8" r="8" fill={props.cult.color} />
                     </svg>
                     <Col style={{ margin: '0px 5px' }}>
-                        <Card.Title className={context.theme + " titleCardModels"}>{props.cult.culture}</Card.Title>
+                        <Card.Title className={context.theme + " titleCardModels"}>{props.cult.name}</Card.Title>
                         <Card.Text style={{ margin: '0px!important' }}>
                             <p className="paramForModelCard">{props.cult.viewModel}</p>
                             <p className="paramForModelCard">{props.cult.currentEvent}</p>

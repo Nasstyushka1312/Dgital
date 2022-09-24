@@ -1,5 +1,6 @@
 import { ThemeContextConsumer } from '../ThemeContext';
 import './Table_For_Tariffs.css';
+import { myTariffs } from '../classForDataBase';
 function Table_For_Tariffs(props) {
     return (
         <ThemeContextConsumer>{context => (
@@ -10,7 +11,7 @@ function Table_For_Tariffs(props) {
                     <th className="ForBox">Наименование</th>
                     <th className="ForBox">Сумма</th>
                 </tr>
-                {props.historyTariffs.map((tariff) =>
+                {props.myTariffs.map((tariff) =>
                     <tr>
                         <td className="ForBox PaddingForNum">{tariff.num}</td>
                         <td className="ForBox">{tariff.date}</td>

@@ -12,11 +12,10 @@ function ModelsCont(props) {
                 <Container className="ContForH"><p className={context.theme + "Gray textForH"}>Модели {props.culture.length}/15</p>
                     <p className={context.theme + "Gray textForH"}>Общая площадь 1234/5000</p></Container>
                 <CardsModels culture={props.culture} />
-                <Container className="ContForButton">
+                <Container style={{width:'19%'} }>
                     <Link to={'/create_model'} style={{ padding:'0px', display:'flex',justifyContent:'center' }}>
                         <AddingButton textForButton="Новая модель" ClassName="changeButtonForModelButton" />
-                        </Link>
-                </Container>
+                    </Link></Container>
             </Container>)}
         </ThemeContextConsumer>
                 )

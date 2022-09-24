@@ -4,7 +4,7 @@ import { ThemeContextConsumer } from '../ThemeContext';
 function CardForBody(props) {
     return (
         <ThemeContextConsumer>{context => (
-            <Card onClick={props.onClick} className={(props.active? "modal_cont active ":"modal_cont ")+ context.theme + " CardBodyDark" }>
+            <Card onClick={props.onClick} className={(props.active ? "modal_cont active " : "modal_cont ") + (props.Auth ? "active " : " ")+ context.theme + " CardBodyDark" }>
                 <Container className={context.theme + " textForCardDark"}>{props.children}
             </Container>
         </Card>)}

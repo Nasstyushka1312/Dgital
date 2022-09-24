@@ -6,6 +6,7 @@ import CardForBody from '../components/Card_For_body/CardForBody';
 import './pages.css';
 import { Row, Col, Container } from 'react-bootstrap';
 import Table_For_Tariffs from '../components/Table_For_Tariffs/Table_For_Tariffs';
+import { MyTariff } from './../components/classForDataBase.js';
 import AddingButton from '../components/Button/AddingButton';
 class Tariffs extends Component {
      AddCancel = ['Наименование подписки 1',
@@ -13,55 +14,16 @@ class Tariffs extends Component {
         'Наименование подписки 3',
         'Наименование подписки 4'
     ]
-    
-    historyTariffs = [{
-        num: "1",
-        date: new Date(2020, 4, 7).toLocaleDateString(),
-        name: "Подписка 1",
-        sum:5000
-    },
-        {
-            num: "2",
-            date: new Date(2020, 7, 21).toLocaleDateString(),
-            name: "Подписка 2",
-            sum: 10000
-        },
-        {
-            num: "3",
-            date: new Date(2020, 11, 12).toLocaleDateString(),
-            name: "Подписка 3",
-            sum: 22000
-        },
-        {
-            num: "4",
-            date: new Date(2021, 1, 30).toLocaleDateString(),
-            name: "Подписка 4",
-            sum: 35000
-        },
-        {
-            num: "5",
-            date: new Date(2021, 4, 25).toLocaleDateString(),
-            name: "Подписка 1",
-            sum: 5000
-        },
-        {
-            num: "6",
-            date: new Date(2021, 9, 28).toLocaleDateString(),
-            name: "Подписка 2",
-            sum: 10000
-        },
-        {
-            num: "7",
-            date: new Date(2022, 0, 22).toLocaleDateString(),
-            name: "Подписка 3",
-            sum: 22000
-        },
-        {
-            num: "8",
-            date: new Date(2022, 4, 13).toLocaleDateString(),
-            name: "Подписка 4",
-            sum: 35000
-        }
+
+    myTariffs = [
+        new MyTariff("1", "Подписка 1", new Date(2020, 4, 7).toLocaleDateString(), 5000),
+        new MyTariff("2", "Подписка 2", new Date(2020, 7, 21).toLocaleDateString(), 10000),
+        new MyTariff("3", "Подписка 3", new Date(2020, 11, 12).toLocaleDateString(), 22000),
+        new MyTariff("4", "Подписка 4", new Date(2021, 1, 30).toLocaleDateString(), 35000),
+        new MyTariff("5", "Подписка 5", new Date(2021, 4, 25).toLocaleDateString(), 5000),
+        new MyTariff("6", "Подписка 2", new Date(2021, 9, 28).toLocaleDateString(), 10000),
+        new MyTariff("7", "Подписка 3", new Date(2022, 0, 22).toLocaleDateString(), 22000),
+        new MyTariff("8", "Подписка 4", new Date(2022, 4, 13).toLocaleDateString(), 35000),
     ]
     
     render() {
@@ -83,7 +45,7 @@ class Tariffs extends Component {
                             <CardForBody>
                                 <Container className="ContForHistoryTariff">
                                 <p className="textOpenSansForHistTar" >История подписок</p>
-                                    <Table_For_Tariffs historyTariffs={this.historyTariffs} />
+                                    <Table_For_Tariffs myTariffs={this.myTariffs} />
                                 </Container>
                             </CardForBody></Col>
                     </div>
