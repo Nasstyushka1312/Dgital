@@ -9,7 +9,7 @@ export default class Header_Before_Profile extends Component {
         
         return (
             <ThemeContextConsumer>{context => (
-                <Navbar className={context.theme+ " "+context.theme + "Header"+" navbar navbar-expand-lg navbar-dark sticky-top"} id="headerForHome" collapseOnSelect expand="lg" variant="dark">
+                <Navbar className={context.theme + " " + context.theme + "Header" + " navbar navbar-expand-lg navbar-dark sticky-top"} id="headerForHome" collapseOnSelect expand="lg" variant="dark">
                     <Container id="menu">
                         <Navbar.Brand href="/" className={context.theme + " navbar-brand"} id="DTwin-logo" />
                         <NavLinks_Before_Profile/>

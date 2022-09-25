@@ -10,10 +10,20 @@
     font-size: 30px;
     justify-content: flex-start;
 }
-#headerForHome { 
-    padding:0px;
+#headerForHome {
     background-color: #212026;
-    position:relative;
+    position: relative;
+    padding: 0px;
+}
+#hForModels {
+    height: 92px;
+    background-color: #262626;
+    position: absolute;
+    left: 70px;
+    width: 92%;
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
 }
 #DTwin-logo:hover:after {
         content: "Digital Twin" !important;
@@ -21,6 +31,13 @@
 #DTwin-logo:after {
         content: "DTwin" !important;
     }
+#ModelLogo:hover:after {
+    content: 'Модель поля "Пшеница"';
+}
+
+#ModelLogo:after {
+    content: 'Модель поля "Пшеница"';
+}
 #nav_links {
     margin: 0;
     display: flex;
@@ -28,13 +45,26 @@
     justify-content: right;
     width: max-content;
 }
-#menu{
-    display:flex;
-    justify-content:space-around;
+#menu {
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
 }
+#menu1 {
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+
 .navbar-brand {
     display: inline;
     font-size: 13px;
     font-family: 'Open Sans' !important;
+}
+.navbar-brandForD {
+    display: inline;
+    font-size: 28px;
+    font-family: 'Yeseva One' !important;
 }
 

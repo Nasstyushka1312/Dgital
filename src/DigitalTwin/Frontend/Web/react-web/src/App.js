@@ -10,7 +10,7 @@ import Profile from './pages/Profile.js';
 import Tariffs from './pages/Tariffs';
 import Models from './pages/Models';
 import CreateModel from './pages/CreateModel';
-
+import DashbordEmpty from './pages/Dashboard_(empty)';
 //import { HelloRequest} from './proto/greet_pb';
 //import { GreeterClient} from './proto/greet_grpc_web_pb';
 class App extends Component {
@@ -38,7 +38,8 @@ class App extends Component {
                   <Route path="/profile" element={<Profile />} />
                   <Route path="/tariffs" element={<Tariffs />} />
                   <Route path="/models" element={<Models />} />
-                  <Route path="/create_model" element={<CreateModel/>} />
+                  <Route path="/create_model" element={<CreateModel />} />
+                  <Route path="/dashbordEmpty" element={<DashbordEmpty />} />
                   </Routes>
             {/*<img src={logo} className="App-logo" alt="logo" />*/}
             {/*<p>*/}
