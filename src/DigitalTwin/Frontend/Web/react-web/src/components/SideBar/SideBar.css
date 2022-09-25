@@ -62,7 +62,7 @@
 .imgForPanel {
     width: 20px;
 }
-.sidebar:hover {
+.sidebar:hover{
     width: 200px;
 }
 .LogoForPanel:hover {
@@ -70,4 +70,7 @@
 }
 .bars:hover {
     margin-left: 50px;
+}
+.TextForButPanel:hover {
+    display: block;
 }

@@ -13,15 +13,16 @@
 
 
 #field {
+    
     top: 0px;
-    position:absolute;
-    left:0px; 
-    height:110%;
-    width:100%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 100%;
 }
 #MarginForBlur {
     width: 100%;
-    height: 100%;
+    height: calc(100vh-220px);
     display: flex;
     justify-content: center;
     min-width: -webkit-fill-available;
@@ -40,7 +41,9 @@
     flex-direction: column;
 }
 #ContainerForHome {
-    
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     background: #212026;
+    background-image: url("./../Data/Frame 25.png");
 }
