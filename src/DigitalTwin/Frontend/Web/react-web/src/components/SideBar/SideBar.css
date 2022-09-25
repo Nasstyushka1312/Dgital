@@ -9,11 +9,12 @@
 
 
 .sidebar {
-    background: #000;
+    background: #E2891F;
     color: #fff;
     height: 85vh;
     width: 200px;
     transition: all 0.5s;
+    border-radius: 7px;
 }
 
 .top_section {
