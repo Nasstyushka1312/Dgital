@@ -12,17 +12,10 @@
 }
 
 
-#field {
-    
-    top: 0px;
-    position: absolute;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-}
+
 #MarginForBlur {
     width: 100%;
-    height: calc(100vh-220px);
+    height: 100%;
     display: flex;
     justify-content: center;
     min-width: -webkit-fill-available;

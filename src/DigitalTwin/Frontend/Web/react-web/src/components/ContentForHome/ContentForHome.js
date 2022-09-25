@@ -7,7 +7,6 @@ function ContentForHome() {
     return (
         <ThemeContextConsumer>{context => (
             <Container className={context.theme+"Gray"} id="ContainerForHome">
-            <Container id="field" />
             <CardBlur/>
         </Container>
             )
