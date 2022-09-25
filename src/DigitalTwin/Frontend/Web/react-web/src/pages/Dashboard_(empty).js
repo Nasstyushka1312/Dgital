@@ -14,7 +14,7 @@ class DashbordEmpty extends Component {
         return (<>
             <ThemeContextConsumer>{context => (
                 <div style={{ height: '100%' }}>
-                    <HeaderForDashboard/>
+                    <HeaderForDashboard />
                     <div className={context.theme + "Gray " + "body_style"}>
                         <SideBar></SideBar>
                         

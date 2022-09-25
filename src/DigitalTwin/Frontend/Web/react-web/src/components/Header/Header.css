@@ -16,7 +16,8 @@
     padding: 0px;
 }
 #hForModels {
-    height: 92px;
+    top: 20px;
+    height: 70px;
     background-color: #262626;
     position: absolute;
     left: 70px;
