@@ -8,6 +8,7 @@ import { ThemeContextConsumer } from "../components/ThemeContext";
 import ButtonOpt from "../components/Button/ButtonOpt";
 import Combobox from '../components/Combobox/ComboBox.js';
 import SideBar from '../components/SideBar/SideBar.js';
+import ContentDashboard from './../components/ContentDashboard/ContentDashboard';
 class DashbordEmpty extends Component {
     render() {
 
@@ -16,12 +17,12 @@ class DashbordEmpty extends Component {
                 <div style={{ height: '100%' }}>
                     <HeaderForDashboard />
                     <div className={context.theme + "Gray " + "body_style"}>
-                        <SideBar></SideBar>
-                        
+                        <SideBar/>
+                        <ContentDashboard/>
                     </div>
                 </div>)}
             </ThemeContextConsumer>
-            )
+           
         </>
         );
     }

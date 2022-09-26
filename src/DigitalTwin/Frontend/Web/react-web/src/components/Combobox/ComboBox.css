@@ -16,8 +16,18 @@
     flex-direction: column;
     
 }
+.padCombobox{
+    padding: 10px 0px 0px 0px;
+}
+
 .textForSign {
     font-size: 14px;
+    margin: 7px 0px !important;
+    display: flex;
+    font-family: 'Open Sans';
+}
+.textForSign12 {
+    font-size: 12px;
     margin: 7px 0px !important;
     display: flex;
     font-family: 'Open Sans';

@@ -13,8 +13,8 @@ const LogInPopUp = (props) => {
         <div className={props.active ? "containerForPop active" : "containerForPop"} onClick={() => { props.setActive() }}>
             <CardForBody active={props.active} Auth={true} onClick={e => e.stopPropagation()}>
                 <h5 id="mainText">Авторизация</h5>
-                <Input Label="E-mail"></Input>
-                <Input Label="Пароль"></Input>
+                <Input Label="E-mail" className="input" classNameP="textForSign" ></Input>
+                <Input Label="Пароль" className="input" classNameP="textForSign"></Input>
                 <Col className="column_For_LogInPopUp">
                     <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}><GPlus /><VK /><Yandex />
                     </Col>

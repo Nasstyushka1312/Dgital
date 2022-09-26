@@ -5,8 +5,7 @@ import Inside_Card_For_Body from '../components/Inside_Card_For_Body/Inside_Card
 import CardForBody from '../components/Card_For_body/CardForBody';
 import './pages.css';
 import { Row, Col, Container} from 'react-bootstrap';
-import InputCircle from '../components/input/InputCircle';
-import InputCircleMini from '../components/input/InputCircleMini';
+import Input from '../components/input/Input';
 import GPlus from './../components/logo/G+';
 import Yandex from './../components/logo/Yandex';
 import VK from './../components/logo/VK';
@@ -22,15 +21,15 @@ class Profile extends Component {
                                 <Container className="contTwoLevelForInside">
                                     <Inside_Card_For_Body>
                                         <p className="FirstCardH">Профиль</p>
-                                        <InputCircle Label="Фамилия Имя Отчество">
-                                        </InputCircle >
-                                        <InputCircle Label="Электронная почта">
-                                        </InputCircle>
-                                        <InputCircle Label="Номер телефона">
-                                        </InputCircle>
+                                        <Input classNameP="textForInpCircle" className="inputCircle" contClass="margInputContCirce" Label="Фамилия Имя Отчество">
+                                        </Input>
+                                        <Input classNameP="textForInpCircle" className="inputCircle" contClass="margInputContCirce" Label="Электронная почта">
+                                        </Input>
+                                        <Input classNameP="textForInpCircle" className="inputCircle" contClass="margInputContCirce" Label="Номер телефона">
+                                        </Input>
                                         <Container style={{ padding: '25px 0px 0px 0px' } }>
-                                        <InputCircle Label="Введите пароль для сохрранения">
-                                            </InputCircle></Container>
+                                            <Input classNameP="textForInpCircle" className="inputCircle" contClass="margInputContCirce" Label="Введите пароль для сохрранения">
+                                            </Input></Container>
                                         <Container className="ContForButton">
                                         <button type="submit" className="buttonFirstCardInside  btn btn-primary" >Сохранить</button>
                                         </Container>
@@ -48,12 +47,12 @@ class Profile extends Component {
                                     <Container className="contThreeLevelForInside">
                                     <Inside_Card_For_Body>
                                             <p className="SecondCardH">Смена пароля</p>
-                                            <InputCircleMini Label="Текущий пароль">
-                                            </InputCircleMini >
-                                            <InputCircleMini Label="Новый пароль">
-                                            </InputCircleMini>
-                                            <InputCircleMini Label="Повторите новый пароль">
-                                            </InputCircleMini>
+                                            <Input classNameP="textForInpCircle" className="inputCircleMini" contClass="margInputContCirce" Label="Текущий пароль">
+                                            </Input>
+                                            <Input classNameP="textForInpCircle" className="inputCircleMini" contClass="margInputContCirce" Label="Новый пароль">
+                                            </Input>
+                                            <Input classNameP="textForInpCircle" className="inputCircleMini" contClass="margInputContCirce" Label="Повторите новый пароль">
+                                            </Input>
                                             <Container className="ContForButton">
                                                 <button type="submit" className="buttonFirstCardInside  btn btn-primary" >Сменить</button>
                                             </Container>

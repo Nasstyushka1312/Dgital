@@ -36,24 +36,14 @@ const Sidebar = ({ children }) => {
             path: "#nogo",
             name: "Comment",
             icon: <BackIn_Icon />
-        },
-        {
-            path: "#nogo",
-            name: "Product",
-            icon: <Profile_Icon />
-        },
-        {
-            path: "#nogo",
-            name: "Product List",
-            icon: <Profile_Icon />
         }
     ]
     return (
         <div className="contForPanel">
-            <div className="sidebar">
+            <div style={{ width: state.collapsed ? "200px" : "50px" }} className="sidebar">
                 <div className="top_section">
-                    <h1 className="LogoForPanel">Logo</h1>
-                    <div className="bars">
+                    <h1 style={{ display: state.collapsed ? "block" : "none" }} className="LogoForPanel">Logo</h1>
+                    <div style={{ marginLeft: state.collapsed ? "50px" : "0px" }} className="bars">
                         <Profile_Icon onClick={toggleCollapsed} />
                     </div>
                 </div>
@@ -61,7 +51,7 @@ const Sidebar = ({ children }) => {
                     menuItem.map((item, index) => (
                         <NavLink to={item.path} key={index} className="TextPanel" activeclassName="activeForPanel">
                             <div className="IconForPanel">{item.icon}</div>
-                            <div className="TextForButPanel">{item.name}</div>
+                            <div style={{ display: state.collapsed ? "block" : "none" }} className="TextForButPanel">{item.name}</div>
                         </NavLink>
                     )) 
                 }

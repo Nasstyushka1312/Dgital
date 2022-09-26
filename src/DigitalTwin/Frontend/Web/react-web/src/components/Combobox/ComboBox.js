@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './ComboBox.css';
-function Combobox() {
+function Combobox(props) {
     
         return (
             <>
-                <div className="form-group contForCombobox">
-                    <label className="textForSign ">Вид культуры</label>
-                    <select className="form-control" id="FormControlSelect">
+                <div className={ "form-group contForCombobox "+props.classNameCont}>
+                    <label className={props.classTextCombobox} >{props.textCombobox}</label>
+                    <select className="form-control " id="FormControlSelect">
                         <option className="opt">Выберите культуру...</option>
                         <option className="opt">Овес</option>
                         <option className="opt">Рис</option>

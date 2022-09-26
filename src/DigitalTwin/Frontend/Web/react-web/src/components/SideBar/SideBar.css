@@ -62,15 +62,18 @@
 .imgForPanel {
     width: 20px;
 }
-.sidebar:hover{
-    width: 200px;
+.sidebar .TextForButPanel {
+    display: none;
 }
-.LogoForPanel:hover {
+
+.sidebar:hover .LogoForPanel {
     display: block;
 }
-.bars:hover {
+
+.sidebar .bars:hover {
     margin-left: 50px;
 }
-.TextForButPanel:hover {
+
+.sidebar:hover .TextForButPanel {
     display: block;
 }
